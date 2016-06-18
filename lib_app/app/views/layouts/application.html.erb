@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LibApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= yield %>
+
+  <% if flash[:notice] || flash[:errors] %>
+   <div class="notice"><%= flash[:notice] %></div>
+   <div class="errors"><%= flash[:errors] %></div>
+ <% end %>
+
+</body>
+</html>

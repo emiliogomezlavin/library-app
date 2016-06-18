@@ -1,0 +1,9 @@
+<h1>Create a New Library</h1>
+
+<%= form_for @library do |form| %>
+  Library Name: <%= form.text_field :name, placeholder: "Name of Library" %>
+  Number of Floors: <%= form.text_field :floor_count, placeholder: "5 floors" %>
+  Sq. Foot Area: <%= form.text_field :floor_area, placeholder: "5000" %>
+  <%= form.submit "Save" %>
+
+<% end %>
