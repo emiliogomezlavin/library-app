@@ -9,7 +9,9 @@ class LibraryUsersController < ApplicationController
 
   def create
     @user = @current_user
+    p @user
     @library = Library.find(params[:library_id])
+    p @library
     if @user.libraries.push(@library)
       redirect_to user_libraries(@user)
     else
